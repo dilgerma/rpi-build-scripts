@@ -13,7 +13,7 @@ mkdir -p src/github.com/weaveworks
 cd src/github.com/weaveworks
 rm -rf weave
 echo "cloning"
-#git clone -b rpi-latest-release http://github.com/dilgerma/weave
+git clone -b rpi-latest-release http://github.com/dilgerma/weave
 cd weave
 make SUDO=
 publish

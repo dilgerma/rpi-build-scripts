@@ -10,7 +10,7 @@ rm -rf src/github.com/weaveworks/scope
 mkdir -p src/github.com/weaveworks
 cd src/github.com/weaveworks
 echo "cloning"
-git clone -b rpi-latest-release http://github.com/dilgerma/scope
+git clone -b latest-rpi-release http://github.com/dilgerma/scope
 cd scope
 make deps SUDO=
 make SUDO=
