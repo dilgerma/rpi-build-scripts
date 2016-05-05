@@ -22,19 +22,23 @@ publish {
    docker tag -f dilgerm/weave dilgerm/rpi-weave:latest
    docker tag -f dilgerm/weaveexec dilgerm/rpi-weaveexec:latest
    docker tag -f dilgerm/plugin dilgerm/rpi-plugin:latest
+   docker tag -f dilgerm/weavedb dilgerm/rpi-weave-db:latest
 
    docker push dilgerm/rpi-weave:latest
    docker push dilgerm/rpi-weaveexec:latest
    docker push dilgerm/rpi-plugin:latest
+   docker push dilgerm/rpi-weave-db:latest
 
    if [ -n "$TAG" ]; then
       docker tag dilgerm/weave dilgerm/rpi-weave:$TAG
       docker tag dilgerm/weaveexec dilgerm/rpi-weaveexec:$TAG
       docker tag dilgerm/plugin dilgerm/rpi-plugin:$TAG
-
+      docker tag dilgerm/weavedb dilgerm/rpi-weave-db:$TAG  
+ 
       docker push dilgerm/rpi-plugin:$TAG
       docker push dilgerm/rpi-weave:$TAG
       docker push dilgerm/rpi-weaveexec:$TAG 
+      docker push dilgerm/rpi-weavedb:$TAG
    fi
 }
 
