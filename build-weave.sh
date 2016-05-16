@@ -16,9 +16,9 @@ echo "cloning"
 git clone -b rpi-latest-release http://github.com/dilgerma/weave
 cd weave
 make SUDO=
-publish
+#publish
 
-publish {
+publish() {
    docker tag  dilgerm/weave dilgerm/rpi-weave:latest
    docker tag  dilgerm/weaveexec dilgerm/rpi-weaveexec:latest
    docker tag  dilgerm/plugin dilgerm/rpi-plugin:latest
